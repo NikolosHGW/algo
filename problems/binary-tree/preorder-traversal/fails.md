@@ -1,5 +1,5 @@
 ## 1:
-```
+```go
 func preorderTraversal(root *TreeNode) []int {
     result := []int{}
     travers(root, result)
@@ -8,7 +8,7 @@ func preorderTraversal(root *TreeNode) []int {
 }
 ```
 
-```
+```go
 func travers(node *TreeNode, result []int) {
     if node == nil {
         return
@@ -23,7 +23,7 @@ func travers(node *TreeNode, result []int) {
 Не разобрался с работой передачи переменных в функции. Модификация слайса result происходит в локальной переменной функции traver, от чего с оригинальным result ничего не происходит.
 
 ## 2:
-```
+```go
 func preorderTraversal(root *TreeNode) []int {
     result := []int{}
     travers(root, &result)
@@ -32,7 +32,7 @@ func preorderTraversal(root *TreeNode) []int {
 }
 ```
 
-```
+```go
 func travers(node *TreeNode, result *[]int) {
     if node == nil {
         return
